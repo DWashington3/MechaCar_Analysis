@@ -1,3 +1,13 @@
+# load tidyverse package
+library(tidyverse)
+# Deliverable 1
+# read MechaCar_mpg.csv file as a dataframe
+MechaCar_mpg <- read.csv(file='MechaCar_mpg.csv',check.names=F,stringsAsFactors = F)
+# Multi linear regression using the 'lm()' function and then the "summary()' function
+lm(mpg~vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_mpg)
+#summary
+summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data=MechaCar_mpg)) #generate summary of multiple linear regression model
+#result
 Call:
   lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle + 
        ground_clearance + AWD, data = MechaCar_mpg)
@@ -20,3 +30,24 @@ ground_clearance  3.546e+00  5.412e-01   6.551 5.21e-08 ***
 Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
+
+
+# Deliverable 2
+# read Suspension_Coil.csv file as a table
+suspension_coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors = F) 
+# total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil's PSI column
+sum_suspension <- summarize(suspension_coil, Mean=mean(PSI),Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
+# lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot by the mean, median, var, and sd of the suspension coil's PSI column
+psi_group <- group_by(suspension_coil, Manufacturing_Lot)
+lot_summary <- summarize(psi_group, Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI))
+
+# Deliverable 3
+# t.test() function the PSI of all lots 
+t.test(suspension_coil$PSI,mu=1500)
+ 
+# Lot 1
+t.test(subset(suspension_coil, Manufacturing_Lot =="Lot1")$PSI, mu=1500)
+# Lot 2
+t.test(subset(suspension_coil, Manufacturing_Lot =="Lot2")$PSI, mu=1500)
+# Lot 3
+t.test(subset(suspension_coil, Manufacturing_Lot =="Lot3")$PSI, mu=1500)
