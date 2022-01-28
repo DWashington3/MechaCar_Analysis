@@ -6,7 +6,7 @@ To assist with a MechaCar's production bottleneck, I've been tasked with perform
 ### Linear Regression to Predict MPG
 <img width="573" alt="MPR_regression" src="https://user-images.githubusercontent.com/87162266/151458789-e415f6d0-2891-4140-a05a-20230d0d3fb5.PNG">
 
-### Summary:
+### Summary
 In this Multi-Linear Regression vehicle length and ground clearance don't provide a random amount of variance to the MPG values. The slop wouldn't be considered Zero simply because the P-value of 5.85 x10^-11 is a very small number. Such a small P-value doesn't correlate the X and Y since it is below the significance level. Since the Multiple R-Squared value is 0.7149, this model does predict the MPG of the prototypes effectively.
 
 ## Summary Statistics on Suspension Coils
@@ -18,7 +18,9 @@ In this Multi-Linear Regression vehicle length and ground clearance don't provid
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch.  On average the three lots suspension coils meet the design specification. However, after dividing it by lot, lot 3 does not meet the design specifications. Lot 1 and lot 2 have a variance of 0.98 and 7.47 respectively, while lot 3 has 170.87.
 
 ## T-Tests on Suspension Coils
-### Total lots T-Test- This t-test compares the PSI for all three lots is statistically different from the population mean of 1,500 PSI. The successive t-tests are per lot. 
+
+### Total lots
+- T-Test- This t-test compares the PSI for all three lots is statistically different from the population mean of 1,500 PSI. The successive t-tests are per lot. 
 <img width="481" alt="ons_samplet" src="https://user-images.githubusercontent.com/87162266/151491850-a8ca7fa7-6247-486c-86a5-bf4f8f617159.PNG">
 
 ### Lot One
@@ -32,7 +34,6 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 ## Study Design: MechaCar vs Competition
 There are several variables that go into deciding what car to choose. The monthly cost, mileage efficiency, maintenance cost, warranty, and safety ratings. (X) is a heavily weighted variable when buying a car, and in his analysis, I will compare how MechaCar performed next to its competitors.
-
 
 
 
