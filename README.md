@@ -33,14 +33,11 @@ The design specifications for the MechaCar suspension coils dictate that the var
 <img width="527" alt="lot 3" src="https://user-images.githubusercontent.com/87162266/151491943-8652c783-4b47-47d8-8aac-07be13294ed3.PNG">
 
 ## Study Design: MechaCar vs Competition
-There are several variables that go into deciding what car to choose. The monthly cost, mileage efficiency, maintenance cost, warranty, and safety ratings. (X) is a heavily weighted variable when buying a car, and in his analysis, I will compare how MechaCar performed next to its competitors.
+There are several variables affect's decision to buy a car.  For  new or used cars things like miles driven, cost mileage efficiency, maintenance cost, performance and safety ratings matter. More buyers drive automatic transmission than manual, and that may be a deal breaker for some buyers. I am going to test MachaCar's price of used car population's automatic and manual transmissions against the population total. The hypothesis would go as follows:
 
+H₀= There is no statistical difference between MechaCar's price and their competitors' price when measuring like transmissions.
 
+Ha=There is ₐ statistical difference between MechaCar's price and their competitors' price when measuring like transmissions.
 
-
-Write a short description of a statistical study that can quantify how the MechaCar performs against the competition. In your study design, think critically about what metrics would be of interest to a consumer: for a few examples, cost, city or highway fuel efficiency, horse power, maintenance cost, or safety rating.
-In your description, address the following questions:
-What metric or metrics are you going to test?
-What is the null hypothesis or alternative hypothesis?
-What statistical test would you use to test the hypothesis? And why?
-What data is needed to run the statistical test?
+A two-sample t-test would be used to compare both the competitors population  and MechaCar's population for a statistical difference in price.
+The information required to complete this task is MechaCar's price and transmission vehicle data and the competitors' respective vehicle data.
